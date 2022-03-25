@@ -1,0 +1,19 @@
+$bc: blanchedalmond;
+
+.Layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 95vh;
+
+    &__main {
+        flex: 1;
+    }
+
+    &__header {
+        background-color: $bc;
+    }
+
+    &__footer {
+        background-color: $bc;
+    }
+}
