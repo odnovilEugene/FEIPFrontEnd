@@ -1,4 +1,5 @@
-$bc: blanchedalmond;
+$background-header: #FFFFFF;
+$background-footer: #254741;
 
 .Layout {
     display: flex;
@@ -10,10 +11,14 @@ $bc: blanchedalmond;
     }
 
     &__header {
-        background-color: $bc;
+        background-color: $background-header;
     }
 
     &__footer {
-        background-color: $bc;
+        background-color: $background-footer;
     }
+}
+
+.Container {
+    @extend .uk-container;
 }

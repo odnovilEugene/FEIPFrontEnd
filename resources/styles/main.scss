@@ -1,0 +1,20 @@
+@import "./uikit.scss";
+@import "../layouts/base.scss";
+@import "../styles/elements.scss";
+
+// Components
+
+@import '../components/header/header.scss';
+@import '../components/footer/footer.scss';
+@import '../components/site-nav/site-nav.scss';
+
+$primary: rgb(82, 79, 79);
+$secondary: grey;
+
+.hello-world {
+    color: $primary;
+}
+
+.lorem {
+    color: $secondary;
+}

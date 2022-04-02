@@ -1,0 +1,13 @@
+$button-background-color: #029F59;
+
+.Button {
+    @extend .uk-button;
+
+    &--primary {
+        @extend .uk-button-primary;
+        height: 5rem;
+        background-color: $button-background-color;
+        border-radius: 10px;
+        font-family: $base-heading-font-family;
+    }
+}
