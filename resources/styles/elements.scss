@@ -5,7 +5,8 @@ $button-background-color: #029F59;
 
     &--primary {
         @extend .uk-button-primary;
-        height: 5rem;
+        height: 49px;
+        width: 204px;
         background-color: $button-background-color;
         border-radius: 10px;
         font-family: $base-heading-font-family;
