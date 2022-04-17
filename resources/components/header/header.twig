@@ -24,16 +24,26 @@
             {{ macros.logo }}
         </div>
 
-        {% include "@components/site-nav/site-nav.twig" with {
-            items: scope.menu,
-        } %}
+        <nav class="Header__nav">
+            {% include "@components/site-nav/site-nav.twig" with {
+                items: scope.menu,
+            } %}
+        </nav>
 
         <div class="Header__phone">
             {{ macros.phone(scope.phone) }}
         </div>
 
-        {{ macros.button }}
+        
+        <div class="Header__feedbackButton">
+            {{ macros.button }}
+        </div>
+
+        <div class="Header__offCanvasButton">
+            {{ macros.offCanvasButton }}
+        </div>
     </div>
+    {{ macros.offCanvas(scope) }}
 {% endmacro %}
 
 {{ macros.content(scope) }}
@@ -42,7 +52,7 @@
     <a href="{{ route('home') }}">
         <img
             src="{{ 'assets/images/logo.svg' }}"
-            alt="Загородный дом"
+            alt="Cottage"
          >
     </a>
 {% endmacro %} 
@@ -51,8 +61,8 @@
     {% set phone = phone ?? '' %}
     <a href="tel:{{ phone }}" class="PrimaryPhone">
         <img 
-            src="{{ 'assets/images/phone.svg' }}"
-            alt="Телефон"
+            src="{{ 'assets/icons/green-phone.svg' }}"
+            alt="Phone icon"
          >
     </a>
     {{ phone }}
@@ -62,4 +72,45 @@
     <button type="button" class="Button Button--primary">
         Оставить заявку
     </button>
+{% endmacro %}
+
+{% macro offCanvasButton() %}
+    <button
+        uk-toggle="target: #offcanvas"
+        type="button"
+        class="Button Button--primary Button--icon"
+    >
+        <img 
+                src="{{ 'assets/icons/white-list.png' }}"
+                alt="List icon" width="24" height="14"
+        >
+    </button>
+{% endmacro %}
+{% macro offCanvas(scope) %}
+    <div id="offcanvas" uk-offcanvas="overlay: true; flip: true;" class="OffCanvas">
+        <div class="uk-offcanvas-bar OffCanvas__layout">
+            <button
+                class="uk-offcanvas-close Button OffCanvas__close"
+                type="button"
+                
+            >
+                <img
+                    src="{{ 'assets/icons/white-cross.svg' }}"
+                    alt="Cross icon" width="12" height="12"
+                >
+            </button>
+
+            <nav class="OffCanvas__nav">
+            {% include '@components/site-nav/site-nav.twig' with {
+                items: scope.menu,
+                column: true,
+                white: true,
+            } %}
+            </nav>
+
+            <div class="OffCanvas__contacts">
+                {% include '@components/contacts/contacts.twig' %}
+            </div>
+        </div>
+    </div>
 {% endmacro %}

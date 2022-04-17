@@ -1,12 +1,14 @@
 @import "./uikit.scss";
 @import "../layouts/base.scss";
 @import "../styles/elements.scss";
+@import "../styles/media.scss";
 
 // Components
 
 @import '../components/header/header.scss';
 @import '../components/footer/footer.scss';
 @import '../components/site-nav/site-nav.scss';
+@import '../components/contacts/contacts.scss';
 
 $primary: rgb(82, 79, 79);
 $secondary: grey;
