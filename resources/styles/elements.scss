@@ -11,4 +11,14 @@ $button-background-color: #029F59;
         border-radius: 10px;
         font-family: $base-heading-font-family;
     }
+
+    &--secondary {
+        @extend .uk-button-secondary;
+    }
+
+    &--icon {
+        padding-left: 16px;
+        padding-right: 16px;
+        width: 60px;
+    }
 }

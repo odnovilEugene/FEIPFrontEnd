@@ -1,11 +1,50 @@
+$active-link-color: #004a29;
+
 .SiteNav {
     display: flex;
     list-style: none;
+    margin-top: 1.5em;
+    
+
+    &--column {
+        flex-flow: column;
+        
+        %SiteNav--column__listItem {
+            :root & {
+                margin-right: unset;
+            }
+            &:not(:last-child) {
+                margin-bottom: 1.7em;
+            }
+            
+            &:first-child {
+                margin-top: 2.5em;
+            }
+        }
+    }
+
+    &--white {
+        %SiteNav--white__item {
+            :root & {
+                color: white;
+            }
+
+            &:hover,
+            &focus,
+            &active {
+                color: $active-link-color;
+            }
+        }
+    }
 
     &__listItem {
+        flex-grow: column;
+
         &:not(:last-child) {
             margin-right: 24px;
         }
+
+        @extend %SiteNav--column__listItem !optional;
 
         a {
             text-decoration: none;
@@ -21,5 +60,9 @@
         &active {
             color: black;
         }
+
+        @extend %SiteNav--white__item !optional;
     }
+
+    
 }
