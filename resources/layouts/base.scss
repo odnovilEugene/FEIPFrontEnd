@@ -10,15 +10,26 @@ $background-footer: #254741;
         flex: 1;
     }
 
+    &__section {
+        &--slider {
+            padding-bottom: 8rem;
+            @include vw-xs-down {
+                padding-left: 0.2rem;
+                padding-right: 0.2rem;
+                padding-bottom: 2rem;
+            }
+        }
+    }
+
     &__header {
+        @include vw-xs-down {
+            padding-left: 0.2rem;
+            padding-right: 0.2rem;
+        }
         background-color: $background-header;
     }
 
     &__footer {
         background-color: $background-footer;
     }
-}
-
-.Container {
-    @extend .uk-container;
 }

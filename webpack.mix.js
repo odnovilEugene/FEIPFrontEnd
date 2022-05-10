@@ -22,4 +22,4 @@ mix.js('resources/scripts/main.js', 'public/build')
             'resources/**/*/.php',
         ],
     });
-mix.alias({'uikit-util': resolve(__dirname, 'node_module/uikit/src/js/util')});
+mix.alias({'uikit-util': resolve(__dirname, 'node_modules/uikit/src/js/util')});

@@ -1,5 +1,9 @@
 $button-background-color: #029F59;
 
+.Container {
+    @extend .uk-container;
+}
+
 .Button {
     @extend .uk-button;
 

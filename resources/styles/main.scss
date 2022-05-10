@@ -1,7 +1,8 @@
 @import "./uikit.scss";
-@import "../layouts/base.scss";
-@import "../styles/elements.scss";
 @import "../styles/media.scss";
+@import "../styles/elements.scss";
+@import "../layouts/base.scss";
+// @import url(https://unpkg.com/swiper/swiper-bundle.min.css);
 
 // Components
 
@@ -9,6 +10,8 @@
 @import '../components/footer/footer.scss';
 @import '../components/site-nav/site-nav.scss';
 @import '../components/contacts/contacts.scss';
+@import '../components/slider/slider.scss';
+@import '../components/featured-section/featured-section.scss';
 
 $primary: rgb(82, 79, 79);
 $secondary: grey;
