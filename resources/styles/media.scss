@@ -23,7 +23,7 @@ $bp-xxs: $breakpoint-xxs;
     }
 }
 
-@mixin vw-xss-down {
+@mixin vw-xxs-down {
     @media #{vw-down($bp-xxs)} {
         @content;
     }
